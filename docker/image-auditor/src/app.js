@@ -25,7 +25,7 @@ s.on('message', function (msg, source) {
         activeSince: Date.now(),
         instrument: instruments.get(JSON.parse(msg.toString()).sound)
     }
-    // console.log(obj);
+    console.log(obj);
     history.set(obj.uuid, obj)
     // console.log(history)
 });
