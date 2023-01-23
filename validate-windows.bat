@@ -31,8 +31,8 @@ docker build --tag dai/validate-music --file ./docker/image-validation/Dockerfil
 
 echo "*** Starting validation..."
 
-git remote -v
-docker run --name dai -v //var//run//docker.sock:/var/run/docker.sock dai/validate-music
+git remote -v > check.log
+docker run --name dai -v //var//run//docker.sock:/var/run/docker.sock dai/validate-music >> check.log
 
 
 
